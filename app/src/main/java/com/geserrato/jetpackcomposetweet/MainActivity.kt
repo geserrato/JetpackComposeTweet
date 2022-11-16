@@ -10,6 +10,7 @@ import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
+import com.geserrato.jetpackcomposetweet.ui.screens.TweetScreen
 import com.geserrato.jetpackcomposetweet.ui.theme.JetpackComposeTweetTheme
 
 class MainActivity : ComponentActivity() {
@@ -22,22 +23,20 @@ class MainActivity : ComponentActivity() {
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colors.background
                 ) {
-                    Greeting("Android")
+                    TweetScreen()
                 }
             }
         }
     }
 }
 
-@Composable
-fun Greeting(name: String) {
-    Text(text = "Hello $name!")
-}
 
-@Preview(showBackground = true)
+@Preview(
+    showBackground = true,
+    showSystemUi = true
+)
 @Composable
 fun DefaultPreview() {
     JetpackComposeTweetTheme {
-        Greeting("Android")
     }
 }
